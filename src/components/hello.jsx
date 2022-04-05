@@ -31,6 +31,6 @@ class Hello extends Component {
       <div className={this.state.clicked ? 'clicked' : null} onClick={this.handleClick}>
         Hello {this.props.name} {this.state.counter}
       </div>
-    )
+    );
   }
 }
