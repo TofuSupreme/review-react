@@ -13,9 +13,10 @@ class SearchBar extends Component {
   }
 
   render() {
+    const { term } = this.state;
     return (
       <input
-      value={this.state.term}
+        value={term}
         type="text"
         className="form-control form-search"
         onChange={this.handleUpdate}
