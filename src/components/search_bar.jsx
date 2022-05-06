@@ -8,11 +8,25 @@ class SearchBar extends Component {
     };
   }
 
+  componentWillMount() {
+    console.log("This will be mounted...pause");
+  }
+
+  componentDidMount() {
+    console.log("This has been mounted...pause");
+  }
+
   handleUpdate = (e) => {
-    this.props.searchFunction(e.target.value);
+    this.props.search(e.target.value);
+    this.setState({
+      term:
+        e.target.value
+    });
   }
 
   render() {
+    console.log("Search_bar is rendering...");
+
     const { term } = this.state;
     return (
       <input
